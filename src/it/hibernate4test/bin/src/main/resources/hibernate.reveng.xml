@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+
+	<schema-selection match-schema="PUBLIC" />
+	
+	<table-filter match-name="CUSTOMER" match-schema="PUBLIC" exclude="false" />
+	<table-filter match-name="INVOICE" match-schema="PUBLIC" exclude="false" />
+	<table-filter match-name="ITEM" match-schema="PUBLIC" exclude="false" />
+	<table-filter match-name="PRODUCT" match-schema="PUBLIC" exclude="false" />
+
+</hibernate-reverse-engineering>
