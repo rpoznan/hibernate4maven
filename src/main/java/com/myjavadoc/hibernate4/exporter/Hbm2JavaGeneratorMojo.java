@@ -41,7 +41,9 @@ import com.myjavadoc.hibernate4.HibernateExporterMojo;
 public class Hbm2JavaGeneratorMojo
     extends HibernateExporterMojo
 {
-    /**
+    private static final String FALSE = "false";
+
+	/**
      * Default constructor.
      */
     public Hbm2JavaGeneratorMojo()
@@ -73,8 +75,19 @@ public class Hbm2JavaGeneratorMojo
         POJOExporter exporter = (POJOExporter) super.configureExporter( exp );
         
         // now set the extra properties for the POJO Exporter
-        exporter.getProperties().setProperty( "ejb3", getComponentProperty( "ejb3", "false" ) );
-        exporter.getProperties().setProperty( "jdk5", getComponentProperty( "jdk5", "false" ) );
+        exporter.getProperties().setProperty( "ejb3", getComponentProperty( "ejb3", FALSE ) );
+        exporter.getProperties().setProperty( "jdk5", getComponentProperty( "jdk5", FALSE ) );
+
+        String template = getComponentProperty( "template", FALSE );
+        String templatepath = getComponentProperty( "templatepath", FALSE );
+        if(!template.equals(FALSE)) {
+        	exporter.setTemplateName(template);
+        }
+        if(!templatepath.equals(FALSE)) {
+        	String[] templatePaths = new String[1];
+        	templatePaths[0]=templatepath;
+        	exporter.setTemplatePath(templatePaths);
+        }
         return exporter;
     }
 

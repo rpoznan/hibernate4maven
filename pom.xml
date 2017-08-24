@@ -4,7 +4,7 @@
 
   <groupId>com.myjavadoc</groupId>
   <artifactId>hibernate4-maven-plugin</artifactId>
-  <version>1.0.Beta1</version>
+  <version>1.1.Beta1</version>
   <packaging>maven-plugin</packaging>
 
   <name>hibernate4-maven-plugin Maven Plugin</name>
@@ -77,7 +77,7 @@
 	<dependency>
     	<groupId>org.hibernate</groupId>
     	<artifactId>hibernate-tools</artifactId>
-    	<version>4.3.4.Final</version>
+    	<version>4.3.5.Final</version>
 	</dependency>
     <dependency>
       <groupId>org.apache.maven.plugin-tools</groupId>
